@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MovieApp</string>
+
+    <string name="search_screen_title">Search Movies</string>
+    <string name="results_screen_title">Search Results</string>
+
+    <string name="search_field_hint">Enter search term here...</string>
+
+    <string name="movie_header_title">Title:</string>
+    <string name="movie_header_release_date">Release Date:</string>
+    <string name="movie_header_actors">Actors:</string>
+    <string name="movie_header_director">Director:</string>
+    <string name="movie_header_rated">Rated:</string>
+    <string name="movie_header_ratings">Ratings:</string>
+</resources>

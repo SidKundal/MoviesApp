@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background_gray_light">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/descriptionPageToolbar"
+            android:layout_height="@dimen/toolbar_height"
+            android:layout_width="match_parent"
+            android:titleTextColor="@color/white"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:contentInsetStart="0dp"
+            android:contentInsetLeft="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <TextView
+                android:id="@+id/descriptionPageToolbarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:titleTextColor="@color/white"
+                android:textSize="@dimen/toolbar_title_text_size" />
+        </android.support.v7.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_gray_light">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/moviePosterView"
+                    android:layout_width="@dimen/movie_poster_width"
+                    android:layout_height="@dimen/movie_poster_height"
+                    android:layout_marginTop="@dimen/movie_poster_margin_top"
+                    android:layout_marginBottom="@dimen/movie_poster_margin_bottom"
+                    android:src="@mipmap/ic_launcher"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/tvMovieTitleHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/movie_title_header_text_size"
+                    android:layout_marginLeft="@dimen/movie_title_header_margin_left"
+                    android:layout_marginRight="@dimen/movie_title_header_margin_right"
+                    android:layout_marginBottom="@dimen/movie_title_header_margin_bottom"
+                    android:layout_marginTop="@dimen/movie_title_header_margin_top"
+                    android:text="@string/movie_header_title"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-light"/>
+
+                <TextView
+                    android:id="@+id/tvMovieTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/movie_title_text_size"
+                    android:layout_marginLeft="@dimen/movie_title_margin_left"
+                    android:layout_marginRight="@dimen/movie_title_margin_right"
+                    android:layout_marginBottom="@dimen/movie_title_margin_bottom"
+                    android:layout_marginTop="@dimen/movie_title_margin_top"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-light"/>
+
+                <TextView
+                    android:id="@+id/tvMovieReleaseDateHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/movie_release_date_header_text_size"
+                    android:layout_marginLeft="@dimen/movie_release_date_header_margin_left"
+                    android:layout_marginRight="@dimen/movie_release_date_header_margin_right"
+                    android:layout_marginBottom="@dimen/movie_release_date_header_margin_bottom"
+                    android:layout_marginTop="@dimen/movie_release_date_header_margin_top"
+                    android:text="@string/movie_header_release_date"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-light"/>
+
+                <TextView
+                    android:id="@+id/tvMovieReleaseDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/movie_release_date_text_size"
+                    android:layout_marginLeft="@dimen/movie_release_date_margin_left"
+                    android:layout_marginRight="@dimen/movie_release_date_margin_right"
+                    android:layout_marginBottom="@dimen/movie_release_date_margin_bottom"
+                    android:layout_marginTop="@dimen/movie_release_date_margin_top"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-light"/>
+
+                <TextView
+                    android:id="@+id/tvMovieDirectorHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/movie_director_header_text_size"
+                    android:layout_marginLeft="@dimen/movie_director_header_margin_left"
+                    android:layout_marginRight="@dimen/movie_director_header_margin_right"
+                    android:layout_marginBottom="@dimen/movie_director_header_margin_bottom"
+                    android:layout_marginTop="@dimen/movie_director_header_margin_top"
+                    android:text="@string/movie_header_director"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-light"/>
+
+                <TextView
+                    android:id="@+id/tvMovieDirector"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/movie_director_text_size"
+                    android:layout_marginLeft="@dimen/movie_director_margin_left"
+                    android:layout_marginRight="@dimen/movie_director_margin_right"
+                    android:layout_marginBottom="@dimen/movie_director_margin_bottom"
+                    android:layout_marginTop="@dimen/movie_director_margin_top"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-light"/>
+
+                <TextView
+                    android:id="@+id/tvMovieActorsHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/movie_actors_header_text_size"
+                    android:layout_marginLeft="@dimen/movie_actors_header_margin_left"
+                    android:layout_marginRight="@dimen/movie_actors_header_margin_right"
+                    android:layout_marginBottom="@dimen/movie_actors_header_margin_bottom"
+                    android:layout_marginTop="@dimen/movie_actors_header_margin_top"
+                    android:text="@string/movie_header_actors"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-light"/>
+
+                <TextView
+                    android:id="@+id/tvMovieActors"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/movie_actors_text_size"
+                    android:layout_marginLeft="@dimen/movie_actors_margin_left"
+                    android:layout_marginRight="@dimen/movie_actors_margin_right"
+                    android:layout_marginBottom="@dimen/movie_actors_margin_bottom"
+                    android:layout_marginTop="@dimen/movie_actors_margin_top"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-light"/>
+
+                <TextView
+                    android:id="@+id/tvMovieRatedHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/movie_rated_header_text_size"
+                    android:layout_marginLeft="@dimen/movie_rated_header_margin_left"
+                    android:layout_marginRight="@dimen/movie_rated_header_margin_right"
+                    android:layout_marginBottom="@dimen/movie_rated_header_margin_bottom"
+                    android:layout_marginTop="@dimen/movie_rated_header_margin_top"
+                    android:text="@string/movie_header_rated"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-light"/>
+
+                <TextView
+                    android:id="@+id/tvMovieRated"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/movie_rated_text_size"
+                    android:layout_marginLeft="@dimen/movie_rated_margin_left"
+                    android:layout_marginRight="@dimen/movie_rated_margin_right"
+                    android:layout_marginBottom="@dimen/movie_rated_margin_bottom"
+                    android:layout_marginTop="@dimen/movie_rated_margin_top"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-light"/>
+
+                <TextView
+                    android:id="@+id/tvMovieRatingsHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/movie_ratings_header_text_size"
+                    android:layout_marginLeft="@dimen/movie_ratings_header_margin_left"
+                    android:layout_marginRight="@dimen/movie_ratings_header_margin_right"
+                    android:layout_marginBottom="@dimen/movie_ratings_header_margin_bottom"
+                    android:layout_marginTop="@dimen/movie_ratings_header_margin_top"
+                    android:text="@string/movie_header_ratings"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-light"/>
+
+                <TextView
+                    android:id="@+id/tvMovieRatings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/movie_ratings_text_size"
+                    android:layout_marginLeft="@dimen/movie_ratings_margin_left"
+                    android:layout_marginRight="@dimen/movie_ratings_margin_right"
+                    android:layout_marginBottom="@dimen/movie_ratings_margin_bottom"
+                    android:layout_marginTop="@dimen/movie_ratings_margin_top"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-light"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="@dimen/progress_loader_width"
+        android:layout_height="@dimen/progress_loader_height"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/refreshActionView"
+        android:visibility="invisible"
+        android:layout_centerInParent="true"
+        android:layout_width="@dimen/refresh_icon_width"
+        android:layout_height="@dimen/refresh_icon_height"
+        android:padding="@dimen/refresh_icon_padding"
+        android:src="@drawable/ic_refresh_black"/>
+</RelativeLayout>
+

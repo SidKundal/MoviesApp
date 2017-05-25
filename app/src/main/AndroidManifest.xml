@@ -1,0 +1,48 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rizort.movieapp">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/NoActionBarTheme">
+
+        <activity
+            android:name=".activities.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.SearchScreen"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activities.DescriptionScreen"
+            android:parentActivityName=".activities.ResultsListingScreen"
+            android:screenOrientation="portrait">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.ResultsListingScreen"/>
+        </activity>
+
+        <activity
+            android:name=".activities.ResultsListingScreen"
+            android:parentActivityName=".activities.SearchScreen"
+            android:screenOrientation="portrait">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.SearchScreen"/>
+        </activity>
+    </application>
+
+</manifest>
